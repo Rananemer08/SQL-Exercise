@@ -78,5 +78,29 @@ JOIN Companies c ON e.Company = c.Name
 WHERE e.Role = 'Graphic Designer';
 
 
+#Exercise18
+SELECT*
+FROM students
+WHERE Points = (SELECT MAX(Points) FROM students);
+
+#Exercise19
+SELECT AVG(Points)
+FROM students;
+
+#Exercise20
+SELECT count(*) 
+FROM students 
+WHERE points=500;
+
+#Exercise21
+SELECT Name
+FROM students
+WHERE Name LIKE '%s%';
+
+
+#Exercise22
+SELECT *
+FROM students
+ORDER BY Points DESC;
 
 
