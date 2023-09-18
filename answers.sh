@@ -64,8 +64,18 @@ SELECT employees.name, employees.company, companies.date
 FROM employees ,companies
 WHERE employees.company = companies.name;
 
+#Exercise15
+SELECT employees.name, companies.date
+FROM employees
+JOIN companies
+ON employees.Company = companies.name
+WHERE companies.date < 2000;
 
-
+#Exercise16
+SELECT DISTINCT c.Name AS CompanyName
+FROM Employees e
+JOIN Companies c ON e.Company = c.Name
+WHERE e.Role = 'Graphic Designer';
 
 
 
