@@ -34,4 +34,39 @@ UPDATE Students
 SET Points=Points+1
 WHERE Name = 'Alex';
 
+### Creating Table
+CREATE TABLE IF NOT EXISTS graduates (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL UNIQUE,
+    Age INTEGER,
+    Gender TEXT,
+    Points INTEGER,
+    Graduation date
+);
+
+INSERT INTO graduates (Name, Age, Gender, Points, Graduation)
+SELECT Name, Age, Gender, Points, '08/09/2018'
+FROM students
+WHERE Name = 'Layal';
+
+#Exercise13
+DELETE FROM students WHERE Name = 'Layal';
+
+#Exercise14
+CREATE TABLE newtable AS
+SELECT employees.name, employees.company, companies.date
+FROM employees
+INNER JOIN companies
+ON employees.company = companies.name;
+###Another Method
+CREATE TABLE  newtable AS 
+SELECT employees.name, employees.company, companies.date
+FROM employees ,companies
+WHERE employees.company = companies.name;
+
+
+
+
+
+
 
